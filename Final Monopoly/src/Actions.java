@@ -210,7 +210,7 @@ public class Actions
 
 		public static void purchaseHouses()
 		{
-			System.out.println(inventoryCounter);
+			System.out.println("What property would you like to buy houses on?");
 			if (((Properties) MonopDriver.board[playerLocation]).getNumberOfHousesOwned() >= 4)
 				{
 					System.out.println("Sorry, you have already bought the maximum amount of property on this space.");
