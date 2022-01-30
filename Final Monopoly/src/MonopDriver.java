@@ -32,20 +32,10 @@ public class MonopDriver
 					}
 			
 				 Actions.greetPlayer();
-//				System.out.println("Press 1 for regular monopoly or 2 for Sponge Bob Monopoly!");
-//				monopType = userInput.nextInt();										
-//				
-//				if(monopType == 1)
-//					{
-//						fillBoard();
-//					}
-//					else 
-//					{
-//						fillBoardWithSpongeBob();
-//					}
 
 
-//				Player.turnMenu();
+
+				Actions.turnMenu();
 //				System.out.println(Player.playerLocation);
 //				Player.landOnSquare();
 //				Player.testFreeParking();
@@ -57,12 +47,15 @@ public class MonopDriver
 //						System.out.println(b.getType());
 //					}
 				
-				while(Actions.stillPlaying)
-					{
-						Actions.turnMenu();
-						System.out.println(Actions.playerLocation);
-						Actions.landOnSquare();
-					}
+//				while(Actions.stillPlaying)
+//					{
+//						Actions.turnMenu();
+//						System.out.println(Actions.playerLocation);
+//						Actions.landOnSquare();
+//					}
+				 
+				 //Actions.testFreeParking();
+				 
 			}
 
 

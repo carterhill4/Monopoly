@@ -4,6 +4,7 @@ public class Player2
 		private String name;
 		private int location;
 		private boolean inJail;
+		private int doublesCounter;
 		private int money;
 		private String inventory;
 		private boolean cwDirection;
