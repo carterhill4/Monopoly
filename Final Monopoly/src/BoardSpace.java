@@ -4,8 +4,10 @@ public class BoardSpace
 		private String type, name, owner;
 		private int cost, location;
 		
-		public BoardSpace()
-		{}
+		public BoardSpace(){
+			
+		}
+				
 		
 		public BoardSpace(String t , String n, String o, int c, int l)
 		{

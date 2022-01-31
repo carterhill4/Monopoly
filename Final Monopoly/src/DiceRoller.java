@@ -56,7 +56,6 @@ public class DiceRoller
 				}
 			else
 				{
-					System.out.println("Nice roll");
 					System.out.println();
 				}
 			
@@ -79,13 +78,13 @@ public class DiceRoller
 					}
 				else
 					{
-						System.out.println("Nice roll.");
+						
 						System.out.println();
 					}
 				
 				return negDiceSum;
 			}
-		public static int oneRoll()
+		public static int oneRoll() //for tests
 			{
 				int dice1 = (int) (Math.random()*1 + 1);
 				oneRoll = dice1;

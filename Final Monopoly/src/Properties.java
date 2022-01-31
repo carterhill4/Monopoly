@@ -2,13 +2,7 @@
 public class Properties extends BoardSpace
 	{
 		private boolean developing;
-		private int basicRent;
-		private int houseHotelPrice;
-		private int oneHouseRent;
-		private int twoHouseRent;
-		private int threeHouseRent;
-		private int hotelRent;
-		private int numberOfHousesOwned;
+		private int basicRent, houseHotelPrice, oneHouseRent, twoHouseRent, threeHouseRent, hotelRent, numberOfHousesOwned;
 		private String color;
 
 		public Properties(String t, String n, String o, int c, int l, boolean d , int br , int hh, int or , int tr , int thr , int hr, int nOH, String co)

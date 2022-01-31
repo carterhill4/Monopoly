@@ -13,6 +13,7 @@ public class MonopDriver
 		
 		public static void main(String[] args) throws IOException
 			{
+				Actions.greetPlayer();
 				System.out.println("What monopoly theme would you like to play: "
 						+ "\n1) American/Original Monopoly "
 						+ "\n2) Fortnite Monopoly"
@@ -30,11 +31,8 @@ public class MonopDriver
 					{
 						fillBoardWithSpongeBob();
 					}
-			
-				 Actions.greetPlayer();
 
-
-
+//Actions.testJail();
 				Actions.turnMenu();
 //				System.out.println(Player.playerLocation);
 //				Player.landOnSquare();
@@ -54,7 +52,7 @@ public class MonopDriver
 //						Actions.landOnSquare();
 //					}
 				 
-				 //Actions.testFreeParking();
+				// Actions.testFreeParking();
 				 
 			}
 
