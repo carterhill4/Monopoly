@@ -14,7 +14,7 @@ Property Sweaty_Sands none 140 11 false 10 100 50 150 450 750 0 Pink
 Utility Materials_Company none 150 12
 Property Lazy_Lake none 140 13 false 10 100 50 150 450 750 0 Pink
 Property Retail_Row none 160 14 false 12 100 60 180 500 900 0 Pink
-Railroad Carter_Gas none 200 15 25 50 100 200
+Railroad Carter's_Gas none 200 15 25 50 100 200
 Property Volcano none 180 16 false 14 100 70 200 550 950 0 Orange
 Other Community_Chest none 0 17
 Property The_Agency none 180 18 false 14 100 70 200 550 950 0 Orange

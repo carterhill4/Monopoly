@@ -198,7 +198,7 @@ public class Action
 	MonopDriver.board[playerLocation].getName() + " the " + playerLocation + " spot on the board");
 	
 	inJail = true;
-	inJailTurn();
+	goToJail();
 }
 		public static void goToJail()
 			{
@@ -295,6 +295,7 @@ public class Action
 								if (MonopDriver.board[playerLocation].getOwner().equals(playerName))
 									{
 										System.out.println("You already own this utility");
+										turnMenu();
 									} 
 								else
 									{
@@ -332,6 +333,7 @@ public class Action
 									if (MonopDriver.board[playerLocation].getOwner().equals(playerName))
 										{
 											System.out.println("You already own this railroad");
+											turnMenu();
 										} 
 									else
 										{
@@ -370,6 +372,7 @@ public class Action
 										playerMoney += MonopDriver.board[playerLocation].getCost();
 										System.out.println(
 												"You collected $" + MonopDriver.board[playerLocation].getCost());
+										turnMenu();
 									} 
 								else if (MonopDriver.board[playerLocation].getName().equals("Go_To_Jail"))
 										{
@@ -391,7 +394,7 @@ public class Action
 												
 												System.out.println();
 												System.out.println("You are now moving counter clockwise!");
-												reverseMovePlayer();
+												reverseMenu();
 									} 
 										else if (MonopDriver.board[playerLocation].getName().equals("Income_Tax") || MonopDriver.board[playerLocation].getName().equals("Luxury_Tax"))
 												{
@@ -548,6 +551,7 @@ public class Action
 								if (MonopDriver.board[playerLocation].getOwner().equals(playerName))
 									{
 										System.out.println("You already own this utility");
+										reverseMenu();
 									} 
 								else
 									{
@@ -574,6 +578,10 @@ public class Action
 												playerMoney -= MonopDriver.board[playerLocation].getCost();
 												checkForBankruptcy();
 												inventory.add(MonopDriver.board[playerLocation]);
+												reverseMenu();
+											}
+										else
+											{
 												reverseMenu();
 											}
 									} 
@@ -620,6 +628,7 @@ public class Action
 										playerMoney += MonopDriver.board[playerLocation].getCost();
 										System.out.println(
 												"You collected $" + MonopDriver.board[playerLocation].getCost());
+										reverseMenu();
 									} 
 								else if (MonopDriver.board[playerLocation].getName().equals("Go_To_Jail"))
 										{
@@ -629,23 +638,23 @@ public class Action
 								else if (MonopDriver.board[playerLocation].getName().equals("Jail") && inJail == false)
 									{
 										System.out.println("You are just visiting jail.");
-										turnMenu();
+										reverseMenu();
 									}
 								
-									else if (MonopDriver.board[playerLocation].getName().equals("Free_Parking"))
-											{
-												System.out.println("Your total: " + DiceRoller.oneRoll + "\nYou landed on " + 
-														MonopDriver.board[playerLocation].getName() + " the " + playerLocation + " spot on the board");
+								else if (MonopDriver.board[playerLocation].getName().equals("Free_Parking"))
+										{
+											System.out.println("Your total: " + DiceRoller.oneRoll + "\nYou landed on " + 
+											MonopDriver.board[playerLocation].getName() + " the " + playerLocation + " spot on the board");
 
-														System.out.println("You won " + freeParkingMoney + "!");
-														playerMoney += freeParkingMoney;
-														freeParkingMoney = 100;
+											System.out.println("You won " + freeParkingMoney + "!");
+											playerMoney += freeParkingMoney;
+											freeParkingMoney = 100;
 														
-														System.out.println();
-														System.out.println("You are now moving counter clockwise!");
-														reverseMovePlayer();
+											System.out.println();
+											System.out.println("You are now moving counter clockwise!");
+											reverseMovePlayer();
 											} 
-										else if (MonopDriver.board[playerLocation].getName().equals("Income_Tax") || MonopDriver.board[playerLocation].getName().equals("Luxury_Tax"))
+								else if (MonopDriver.board[playerLocation].getName().equals("Income_Tax") || MonopDriver.board[playerLocation].getName().equals("Luxury_Tax"))
 												{
 													System.out.println("You have been taxed $" + MonopDriver.board[playerLocation].getCost());
 													freeParkingMoney += MonopDriver.board[playerLocation].getCost();
@@ -656,7 +665,7 @@ public class Action
 
 								
 											// chance cards
-											else if (MonopDriver.board[playerLocation].getName().equals("Chance"))
+								else if (MonopDriver.board[playerLocation].getName().equals("Chance"))
 													{
 														int chanceNumber = (int) (Math.random() * 3) + 1;
 														if (chanceNumber == 1)
@@ -684,7 +693,7 @@ public class Action
 												
 												
 												// community chest
-												else
+								else
 													if (MonopDriver.board[playerLocation].getName().equals("Community_Chest"))
 														{
 															int chestNumber = (int) (Math.random() * 3) + 1;

@@ -43,12 +43,17 @@ public class MonopDriver
 						fillBoardWithSpongeBob();
 					}
 
-//Actions.testJail();
+
 				
 						
 						
 						//Action.turnMenu();
-					
+					//Action.testFreeParking();
+				Action.testJail();
+				
+				
+				
+				
 				
 //				System.out.println(Player.playerLocation);
 //				Player.landOnSquare();
@@ -68,7 +73,7 @@ public class MonopDriver
 //						Actions.landOnSquare();
 //					}
 				 
-				Action.testFreeParking();
+				
 				 
 			}
 
