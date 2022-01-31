@@ -40,7 +40,7 @@ public class DiceRoller
 //			 return sumOfDice;
 //		
 //		    }
-		
+		//comment
 		public static int diceRoll()
 		{
 			int dice1 = (int) (Math.random()*6+1);
