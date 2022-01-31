@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,14 +7,24 @@ import java.io.IOException;
 
 public class MonopDriver
 	{
-
+		
+		//static ArrayList<Player> playerInfo = new ArrayList<Player>();
+		
 		static BoardSpace[] board = new BoardSpace[40];
 		static Scanner userInput = new Scanner(System.in);
 		//static int monopType;
 		
 		public static void main(String[] args) throws IOException
 			{
-				Actions.greetPlayer();
+//				System.out.println("What is player one's name?");
+//				String player1Name = userInput.nextLine();
+//				//playerInfo.add(new Player (player1Name, 0, false, 1500, new ArrayList<BoardSpace>(), 1));
+//				Player p1 = new Player(player1Name, 0, false, 1500, new ArrayList<BoardSpace>(), 1);
+//				System.out.println("What is player two's name?");
+//				String player2Name = userInput.nextLine();
+//				Player p2 = new Player (player2Name, 0, false, 1500, new ArrayList<BoardSpace>(), 1);
+				
+				Action.greetPlayer();
 				System.out.println("What monopoly theme would you like to play: "
 						+ "\n1) American/Original Monopoly "
 						+ "\n2) Fortnite Monopoly"
@@ -33,7 +44,12 @@ public class MonopDriver
 					}
 
 //Actions.testJail();
-				Actions.turnMenu();
+				
+						
+						
+						//Action.turnMenu();
+					
+				
 //				System.out.println(Player.playerLocation);
 //				Player.landOnSquare();
 //				Player.testFreeParking();
@@ -52,7 +68,7 @@ public class MonopDriver
 //						Actions.landOnSquare();
 //					}
 				 
-				// Actions.testFreeParking();
+				Action.testFreeParking();
 				 
 			}
 

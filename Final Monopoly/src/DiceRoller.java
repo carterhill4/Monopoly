@@ -52,7 +52,7 @@ public class DiceRoller
 				{
 					doubles = true;
 					System.out.println("You rolled doubles");
-					Actions.timesRolledDoubles++;
+					Action.timesRolledDoubles++;
 				}
 			else
 				{
@@ -74,11 +74,10 @@ public class DiceRoller
 					{
 						doubles = true;
 						System.out.println("You rolled doubles.");
-						Actions.timesRolledDoubles++;
+						Action.timesRolledDoubles++;
 					}
 				else
 					{
-						
 						System.out.println();
 					}
 				
